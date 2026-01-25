@@ -2,6 +2,7 @@ package dev.jasonsaini.runners.run;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
@@ -42,4 +43,14 @@ public class RunRepository {
                 .filter(run -> run.id() == id)
                 .findFirst();
     }
+
+    //post
+    void create(@RequestBody Run run){
+        runs.add(run);
+    }
+
+    //put
+
+
+    //delete
 }
