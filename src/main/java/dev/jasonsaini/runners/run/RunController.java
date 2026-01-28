@@ -51,7 +51,7 @@ public class  RunController {
 
     //delete
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    @PutMapping("/{id}")
+    @DeleteMapping("/{id}")
     void delete (@PathVariable Integer id)
     {
         runRepository.delete(id);
